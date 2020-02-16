@@ -63,6 +63,6 @@ IMPORTANT NOTE: MAKE SURE THAT EXCEL FILE CULOMNS DOES NOT CONTAIN COMMAS, BECAU
 Now, the rows in the excel sheet should have been inserted in the DatabaseTable ‘table’.
 
 
-# # For more information please see the ducomentation.doc or contact me.
+# For more information please see ducomentation.docx
  
 
