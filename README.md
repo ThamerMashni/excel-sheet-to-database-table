@@ -53,33 +53,16 @@ The main goal of this component is to insert an excel sheet into a table already
 
 IMPORTANT NOTE: MAKE SURE THAT EXCEL FILE CULOMNS DOES NOT CONTAIN COMMAS, BECAUSE IT IS THE MECHANISM TO SEPRATE COLUMN VALUES.
 
-
-1. Create two objects one of each class: 
-    DatabaseTable table = null;
-    excelWorksheet uploadedSheet = null;
-
-2. Create the HTML input ‘tileDataFile’ where the file will be uploaded:
-<input type="file" class="form-control" id="tileDataFile" name="tileDataFile" accept=".xlsx,.xlsm,.xlsb, .xltx, .xltm, .xls, .xlt, .xml,">
-
-3. Create the query String to get the uploaded file on POST: 
-
-    if (IsPost){
-HttpPostedFileBase tileDataFile = Request.Files["tileDataFile"];
-}
-
-4. Initialize the variable ‘table’ with the table name, columns, columnsRules and the sql sequence:
-table = new DatabaseTable("T_III_TABLE1","NAME,BADGE,BIRTH_DATE","string,int,DateTime", "SQ_III_TABLE1_Sequence");
-
-5. Now, pass the variable created in step #3 in the constructor of the  excelWorksheet variable:
-      uploadedSheet = new excelWorksheet(tileDataFile);
-
+1. Create two objects one of each class.
+2. Create the HTML input ‘tileDataFile’ where the file will be uploaded.
+3. Create the query String to get the uploaded file on POST.
+4. Initialize the variable ‘table’ with the table name, columns, columnsRules and the sql sequence.
+5. Now, pass the variable created in step #3 in the constructor of the  excelWorksheet variable.
 6. Last step is to call the method excelToDb() passing into it the table. 
  
-      uploadedSheet.excelToDb(table);
-
 Now, the rows in the excel sheet should have been inserted in the DatabaseTable ‘table’.
 
 
-For more information please see the ducomentation .doc or contact me.
+For more information please see the ducomentation.doc or contact me.
  
 
